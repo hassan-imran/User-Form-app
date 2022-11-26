@@ -12,20 +12,20 @@ function App() {
 
     const addData = (name, age, email) => {
 
-        let checkUnique = 0;
+        let checkUnique = true;
 
         userList.forEach((x) => {
             if (x.email.toLowerCase() == email.toLowerCase()) {
                 // console.log('duplicate');
                 setShow(true);
+                checkUnique = false;
                 return;
             }
-            checkUnique++;
         })
 
 
 
-        if (checkUnique === userList.length) {
+        if (checkUnique) {
             const newUserList = [...userList, { name, age, email }];
             setUserList(newUserList)
         }
