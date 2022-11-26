@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import DataEntryForm from './DataEntryForm';
+import DataTable from './DataTable';
+import Error from './Error';
+import Container from 'react-bootstrap/Container';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [userList, setUserList] = useState([]);
+    const [show, setShow] = useState(false);
+
+
+    const addData = (name, age, email) => {
+
+        let checkUnique = 0;
+
+        userList.forEach((x) => {
+            if (x.email.toLowerCase() == email.toLowerCase()) {
+                // console.log('duplicate');
+                setShow(true);
+                return;
+            }
+            checkUnique++;
+        })
+
+
+
+        if (checkUnique === userList.length) {
+            const newUserList = [...userList, { name, age, email }];
+            setUserList(newUserList)
+        }
+        console.log(checkUnique);
+    }
+
+
+
+    return (
+        <div>
+            <Container>
+                <h1 className='display-1 mt-5'>User Data</h1>
+                <hr />
+                <Error show={show} setShow={setShow} />
+                <DataEntryForm addData={addData} />
+                <DataTable userList={userList} />
+            </Container>
+
+
+        </div>
+    );
 }
 
 export default App;
