@@ -1,6 +1,6 @@
 # User Form App
 
-## Objective
+## `Objective`
 
 To create a simple form using React, hooks & functional components that takes 3 inputs:
 
