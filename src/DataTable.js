@@ -18,6 +18,7 @@ function DataTable({ userList }) {
                     </thead>
                     <tbody>
                         {
+                            // A map function to return the rows of the table
                             userList.map((user, key) => (
                                 <tr key={key}>
                                     <td>

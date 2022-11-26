@@ -11,9 +11,16 @@ function DataEntryForm({ addData }) {
     const [email, setEmail] = useState('');
 
     const handleSubmit = (e) => {
+        //Prevent the browser from implementing the default behavior of the event
         e.preventDefault();
+
+        //Do not submit if either of the input fields are empty
         if (!name || !age || !email) return;
+
+        //Call the addData function which will update the state
         addData(name, age, email);
+
+        //Reset the input fields
         setName('');
         setAge('');
         setEmail('');
