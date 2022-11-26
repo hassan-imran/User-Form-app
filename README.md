@@ -10,6 +10,11 @@ To create a simple form using React, hooks & functional components that takes 3 
 
 **Where email has to be unique.**
 
-### `npm test`
+### `Dependencies`
 
-Where
+bootstrap: 5.2.3
+react: 18.2.0
+react-bootstrap: 2.6.0
+react-dom: 18.2.0
+react-scripts: 5.0.1
+web-vitals: 2.1.4
