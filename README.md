@@ -12,9 +12,9 @@ To create a simple form using React, hooks & functional components that takes 3 
 
 ### `Dependencies`
 
-bootstrap: 5.2.3
-react: 18.2.0
-react-bootstrap: 2.6.0
-react-dom: 18.2.0
-react-scripts: 5.0.1
-web-vitals: 2.1.4
++ bootstrap: 5.2.3
++ react: 18.2.0
++ react-bootstrap: 2.6.0
++ react-dom: 18.2.0
++ react-scripts: 5.0.1
++ web-vitals: 2.1.4
