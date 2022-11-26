@@ -19,7 +19,7 @@ function DataTable({ userList }) {
                     <tbody>
                         {
                             userList.map((user, key) => (
-                                <tr>
+                                <tr key={key}>
                                     <td>
                                         {user.name}
                                     </td>
